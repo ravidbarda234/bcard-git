@@ -21,7 +21,7 @@ const AboutPage = () => {
             through business cards, it is basically a kind of small social
             network for business advertising.
           </Typography>
-          <Divider sx={{ margin: 2, fontSize: 18 }}>How Use?</Divider>
+          <Divider sx={{ margin: 2, fontSize: 18 }}>How does it work?</Divider>
           <Typography sx={{ fontSize: 18 }}>
             Using the site is very simple, first you need to Signup by clicking
             the signup button, you are required to fill in details according to
@@ -39,6 +39,10 @@ const AboutPage = () => {
             site is very simple, just log in and register. Enjoy your stay on
             the site, I would love to hear from you if there are any questions
             or anything else.
+          </Typography>
+          <Typography className="center" variant="h5">
+            All you need to do is fill out the form, create your user/business
+            user account, and enjoy our service
           </Typography>
         </Grid>
         <Grid

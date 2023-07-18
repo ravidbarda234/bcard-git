@@ -13,6 +13,7 @@ const ROUTES = {
   EDIT_USER: "/edit-user",
   PROFILE: "/profile",
   USERS_PAGE: "/users-page",
+  MORE_DETAILS: "/more-details",
 };
 
 export const SANDBOX_ROUTES = {

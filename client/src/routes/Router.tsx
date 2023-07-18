@@ -36,6 +36,7 @@ import EditCardPage from "../cards/pages/EditCardPage";
 import EditUserPage from "../users/pages/EditUserPage";
 import ProfilePage from "../users/pages/ProfilePage";
 import UsersPage from "../users/pages/UsersPage";
+import CardMoreDetails from "../cards/pages/CardMoreDetails";
 
 const Router = () => {
   return (
@@ -53,10 +54,13 @@ const Router = () => {
       <Route path={ROUTES.LOGIN} element={<Login />} />
       <Route path={ROUTES.CREATE_CARD} element={<CreateCardPage />} />
       <Route path={`${ROUTES.EDIT_CARD}/:cardId`} element={<EditCardPage />} />
-      {/* <Route path={`${ROUTES.EDIT_USER}/userId`} element={<EditUserPage />} /> */}
       <Route path={`${ROUTES.EDIT_USER}/:userId`} element={<EditUserPage />} />
       <Route path={`${ROUTES.PROFILE}/:userId`} element={<ProfilePage />} />
       <Route path={`${ROUTES.USERS_PAGE}`} element={<UsersPage />} />
+      <Route
+        path={`${ROUTES.MORE_DETAILS}/:cardId`}
+        element={<CardMoreDetails />}
+      />
 
       {/* ----------------------------------------------------------------------- */}
       <Route path={ROUTES.SANDBOX} element={<SandboxMenu />}>

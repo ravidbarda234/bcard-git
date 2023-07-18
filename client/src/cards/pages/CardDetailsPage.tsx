@@ -7,12 +7,16 @@ import useCards from "../hooks/useCards";
 import Spinner from "../../components/Spinner";
 import Error from "../../components/Error";
 import CardsFeedback from "../components/CardsFeedback";
+import { Button } from "@mui/material";
+import ROUTES from "../../routes/routesModel";
+import { useNavigate } from "react-router-dom";
 
 const CardDetailsPage = () => {
   const { cardId } = useParams();
   const { card, error, isLoading, handleGetCard, handleLikeCard, value } =
     useCards();
   const { filterdCards } = value;
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (cardId) handleGetCard(cardId);
@@ -40,6 +44,14 @@ const CardDetailsPage = () => {
             onDelete={console.log}
           />
         </div>
+        <Button
+          color="success"
+          variant="contained"
+          sx={{ marginTop: 1 }}
+          onClick={() => navigate(`${ROUTES.MORE_DETAILS}/${card._id}`)}
+        >
+          Click here for more details
+        </Button>
         <br />
         <br />
       </Container>
