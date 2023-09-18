@@ -8,9 +8,11 @@ import AddIcon from "@mui/icons-material/Add";
 import CardsFeedback from "../components/CardsFeedback";
 import ROUTES from "../../routes/routesModel";
 import { useUser } from "../../users/providers/UserProviders";
+import { log } from "console";
 
 const MyCardsPage = () => {
   const { user } = useUser();
+  console.log(user);
 
   const { value, handleGetMyCards, handleDeleteCard, handleLikeCard } =
     useCards();

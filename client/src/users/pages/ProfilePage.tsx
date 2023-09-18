@@ -34,12 +34,17 @@ const ProfilePage: React.FC = () => {
   const [userData, setUserData] = useState<FullUserType | null>(null);
   const [confirmationDialogOpen, setConfirmationDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  console.log(user);
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`${apiUrl}/users/${user?._id}`);
+        const response = await axios.get<FullUserType>(
+          `${apiUrl}/users/${user?._id}`
+        );
         setUserData(response.data);
+        console.log(response);
+
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching user data:", error);
@@ -77,7 +82,7 @@ const ProfilePage: React.FC = () => {
     <Container sx={{ textAlign: "center" }}>
       <PageHeader
         title="My Profile"
-        subtitle={`${userData?.name?.first} ${userData?.name.last}` || ""}
+        subtitle={`${userData?.name.first} ${userData?.name.last}` || ""}
       />
 
       {userData && (

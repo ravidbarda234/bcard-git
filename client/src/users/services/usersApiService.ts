@@ -23,7 +23,7 @@ export const login = async (user: LoginType) => {
 export const signup = async (normalizedUser: UserType) => {
   try {
     const { data } = await axios.post<UserRegistered>(
-      `${apiUrl}/users`,
+      `${apiUrl}/users/register`,
       normalizedUser
     );
     return data;

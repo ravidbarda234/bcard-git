@@ -3,6 +3,8 @@ import CardInterface from "../interfaces/CardInterface";
 import { NormalizedEditCard } from "../types/cardTypes";
 
 const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8181";
+// export const apiUrl = "http://localhost:8000/api";
+
 //all cards
 export const getCards = async () => {
   try {
